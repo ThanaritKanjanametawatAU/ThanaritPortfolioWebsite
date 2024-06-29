@@ -143,37 +143,305 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.nav {
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo{
+  color: var(--text-color);
+  font-weight: var(--font-bold);
+  font-size: var(--h2-font-size);
+}
+
+.nav__toggle,
+.nav__close {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
 /* Navigation for mobile devices */
+@media screen and (max-width: 1150px){
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: hsla(var(--hue), 70%, 10%, .2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 50%;
+    height: 100%;
+    padding: 7rem 3rem;
+    transition: right .4s;
+    
+}
+}
+
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.nav__link{
+  position: relative;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition: color .4s;
+}
+
+.nav__link::after{
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: var(--first-color-light);
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  transition: width .4s;
+}
+
+
+.nav__link::hover{
+  color: var(--first-color-light);
+}
+
+.nav__link::hover::after{
+  width: 30%;
+}
+
+.nav__close{
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
 
 
 /* Show menu */
+.show-menu{
+  right: 0;
+}
 
 
 /* Add blur header */
+.blur-header::after{
+  content: '';
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(var(--hue), 70%, 4%, .2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  top: 0;
+  left: 0;
+  z-index: -1;
 
+}
 
 /* Active link */
 
 
 /*=============== HOME ===============*/
+.home__container {
+  row-gap: 2rem;
+  padding-top: 1rem;
+}
+
+.home__img {
+  width: 300px;
+  justify-self: center;
+  mask-image: linear-gradient(to bottom, 
+              hsla(var(--hue), 30%, 15%) 60%, 
+              transparent 100%);
+}
+
+.home__name {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-bold);
+  word-break: break-word;
+  margin-bottom: 2rem;
+}
+
+.home__profession {
+  position: relative;
+  font-size: var(--big-font-size);
+  color: var(--text-color);
+}
+
+.home__profession::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  width: 25%;
+  height: 3px;
+  background-color: var(--text-color);
+}
+
+.home__scroll {
+  color: var(--title-color);
+  display: inline-flex;
+  column-gap: .5rem;
+  align-items: center;
+  justify-self: center;
+  margin-top: 3rem;
+}
+
+.home__scroll-box{
+  background-color: var(--first-color);
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+.home__scroll-text{
+  font-weight: var(--font-semi-bold);
+}
+
+.home__scroll-box{
+  animation: scroll 3s infinite;
+}
 
 
 /* Animate scroll icon */
-
+@keyframes scroll-down {
+  0%{
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  50%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(.6rem);
+    opacity: 0;
+  }
+  
+}
 
 /*=============== BUTTON ===============*/
+.button{
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--first-color);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  padding: 1.25rem 2rem;
+  transition: background-color .4s;
+}
 
+.button:hover{
+  background-color: var(--first-color-alt);
+}
 
 /*=============== WORKS ===============*/
+.work{
+  background-color: var(--container-color);
+}
+
+.work__card{
+  background-color: var(--first-color);
+}
+
+.work__link{
+  display: block;
+  position: relative;
+  background-color: var(--body-color);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  color: var(--text-color);
+  transition: transform .4s;
+}
+
+.work__title{
+  font-size: var(--h3-font-size);
+  margin-bottom: .75rem;
+}
+
+.work__description{
+  margin-bottom: 1.5rem;
+}
+
+.work__link i{
+  position: absolute;
+  top: 1.8rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--first-color-light);
+  transition: transform .4s;  
+}
+
+.work__link::hover{
+  transform: translateY(-.35rem);
+}
+
+.work__link::hover i{
+  transform: translate(.5rem);
+} 
+
+
+
+
 
 
 /*=============== INFO ===============*/
+.info__container{
+  row-gap: 3rem;
+}
+
+.info__title{
+  position: relative;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.info__title::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  width: 20px;
+  height: 2px;
+  background-color: var(--text-color);
+}
 
 
 /* ABOUT */
+.about{
+  row-gap: 3rem;
+}
 
+.about__description{
+  margin-bottom: 2rem;
+}
 
+.about__description b{
+  color: var(--first-color-light);
+}
+
+.about__img{
+  width: 300px;
+  justify-self: center;
+  mask-image: linear-gradient(to bottom, 
+              hsla(var(--hue), 30%, 15%) 60%, 
+              transparent 100%);
+}
 /* EXPERIENCE */
 
 
@@ -206,3 +474,10 @@ img {
 
 
 /* For large devices */
+
+
+
+
+
+
+
