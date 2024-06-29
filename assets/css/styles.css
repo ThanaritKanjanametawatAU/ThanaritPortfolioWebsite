@@ -442,10 +442,66 @@ img {
               hsla(var(--hue), 30%, 15%) 60%, 
               transparent 100%);
 }
+
+.about__button{
+  width: 100%;
+}
+
+
+
+
+
 /* EXPERIENCE */
+.experience__content{
+  row-gap: 2rem;
+}
+
+.experiebce__data{
+  row-gap: 1rem;
+}
+
+.experience__company{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-bold);
+}
+
+.experience__profession{
+  font-size: var(--h3-font-size);
+  margin-bottom: .25rem;
+}
+
+.experience_date{
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: .75rem;
+}
 
 
 /* SKILLS */
+.skills__img{
+  width: 35px;
+  margin-bottom: .5rem;
+}
+
+.skills__name{
+  font-size: var(--small-font-size);
+}
+
+.skills__content{
+  grid-template-columns: repeat(3, max-content);
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.skills__box{
+  display: grid;
+  place-items: center;
+  transition: transform .4s;
+}
+
+.skills__box:hover{
+  transform: translateY(-.25rem);
+}
 
 
 /*=============== SERVICES ===============*/
