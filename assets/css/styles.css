@@ -525,10 +525,89 @@ img {
   margin-bottom: .75rem;
 }
 
+.services__description{
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
 
 
 
 /*=============== CONTACT ===============*/
+.contact__container{
+  row-gap: 4rem;
+}
+
+.contact__group,
+.contact__form{
+  gap: 1rem;
+}
+
+.contact__form{
+  position: relative;
+}
+
+.contact__input{
+  padding: 1.25rem;
+  background-color: var(--container-color);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.contact__input::placeholder{
+  color: var(--text-color-light);
+}
+
+.contact__area{
+  height: 10rem;
+  resize: none;
+}
+
+.contact__button{
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.contact__social{
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  column-gap: 5rem;
+}
+
+.contact__social-link{
+  color: var(--title-color);
+  display: inline-flex;
+  column-gap: .25rem;
+  align-items: center;
+  transition: color .4s;
+}
+
+.contact__social-link i{
+  font-size: 1.5rem;
+}
+
+.contract__social-link span{
+  font-size: var(--small-font-size);
+font-weight: var(--font-semi-bold);
+}
+
+.contact__social-link:hover{
+  color: var(--first-color-light);
+}
+
+.contect__message{
+  position: absolute;
+  left: 0;
+  bottom: -2rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+.contact__input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--container-color) inset;
+  box-shadow: 0 0 0px 1000px var(--container-color) inset;
+  -webkit-text-fill-color: var(--title-color);
+}
 
 
 /*=============== FOOTER ===============*/
