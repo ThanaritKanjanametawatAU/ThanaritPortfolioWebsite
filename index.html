@@ -390,13 +390,13 @@
             <h2 class="section__title">CONTACT ME</h2>
 
             <div class="contact__container container grid">
-               <form action="" class="contact__form grid">
+               <form action="" class="contact__form grid", id="contact-form">
                   <div class="contact__group grid">
-                     <input type="text" name="" placeholder="Name" required class="contact__input">
-                     <input type="text" name="" placeholder="Email" required class="contact__input">
+                     <input type="text" name="user_name" placeholder="Name" required class="contact__input">
+                     <input type="text" name="user_email" placeholder="Email" required class="contact__input">
                   </div>
 
-                  <textarea name="" placeholder="Your Message Here..." required class="contact__input contact__area"></textarea>
+                  <textarea name="user_message" placeholder="Your Message Here..." required class="contact__input contact__area"></textarea>
 
                   <button type="submit" class="button contact__button">Send Message</button>
 
@@ -443,7 +443,7 @@
       <script src=""></script>
 
       <!--=============== EMAIL JS ===============-->
-      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"><
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
