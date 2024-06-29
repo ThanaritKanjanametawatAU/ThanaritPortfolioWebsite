@@ -607,7 +607,7 @@ font-weight: var(--font-semi-bold);
   color: var(--first-color-light);
 }
 
-.contect__message{
+.contact__message{
   position: absolute;
   left: 0;
   bottom: -2rem;
@@ -815,7 +815,143 @@ font-weight: var(--font-semi-bold);
     width: 375px;
   }
 
+  .home__name{
+    margin-bottom: 1.5rem;
+  }
+
+  .home__profession::after{
+    bottom: -1rem;
+    width: 35%;
+  }
+
+  .work__container{
+    grid-template-columns: repeat(2, 540px);
+    gap: 2.5rem;
+  }
+
+  .work__link{
+    padding: 3rem 2rem 2rem;
+  }
+
+  .work__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+  }
+
+  .work__link i{
+    font-size: 2rem;
+  }
+
+  .info__container{
+    row-gap: 4rem;
+  }
+
+  .info__title{
+    font-size: var(--normal-font-size);
+    margin-bottom: 3.5rem;
+  }
+
+  .about{
+    grid-template-columns: 320px 420px;
+    column-gap: 11.5rem;
+  }
+
+  .about__img{
+    width: 320px;
+  }
+
+  .about__description{
+    margin-bottom: 3rem;
+  }
  
+  .about__button{
+   width: initial;
+  }
+
+  .experience__content{
+    row-gap: 4rem;
+  }
+
+  .experience__data{
+    grid-template-columns: 320px 380px;
+    column-gap: 11.5rem;
+  }
+
+  .experience__company{
+    font-size: var(--h1-font-size);
+  }
+
+  .experience__profession{
+    margin-bottom: .5rem;
+  }
+
+  .experience_date{
+    font-size: var(--normal-font-size);
+    margin-bottom: 1.5rem;
+  }
+
+  .skills__content{
+    grid-template-columns: repeat(6, max-content);
+  }
+
+  .services__container{
+    grid-template-columns: repeat(2, 350px);
+    gap: 6rem 13rem;
+  }
+
+  .services__icon{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact__container{
+    grid-template-columns: 580px;
+}
+
+  .contact__group{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact__area{
+    height: 15rem;
+  }
+
+  .contact__button{
+    width: max-content;
+    justify-self: center;
+    margin-top: 1.5rem;
+
+  }
+
+  .contact__message{
+    bottom: 4.5rem;
+  }
+
+  .contact__social{
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 5rem;
+  }
+
+  .footer__container{
+    padding-block: 3rem;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+  }
+
+  .footer__links{
+    column-gap: 4rem;
+    order: 1;
+  }
+
+  .scrollup{
+    right: 3rem;
+  }
+
+
+
+
+
+
 }
 
 
