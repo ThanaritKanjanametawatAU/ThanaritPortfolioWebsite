@@ -787,6 +787,16 @@ font-weight: var(--font-semi-bold);
     justify-content: center;
     width: 90%;
     scale: .8;
+    row-gap: 5rem;
+  }
+
+  .contact__container{
+    scale: .9;
+  }
+
+  .work__card{
+    justify-content: center;
+    width: 95%;
   }
 
 
