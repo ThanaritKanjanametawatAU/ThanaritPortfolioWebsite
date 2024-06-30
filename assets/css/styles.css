@@ -944,7 +944,7 @@ font-weight: var(--font-semi-bold);
   }
 
   .contact__social{
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(4, max-content);
     column-gap: 5rem;
   }
 
