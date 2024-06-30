@@ -364,9 +364,17 @@ img {
   background-color: var(--container-color);
 }
 
-.work__card{
-  background-color: var(--first-color);
+.work__card {
+    padding: 0;
+    width: 110%;
+    border: none;
+    display: flex; /* Flex layout to manage child alignment */
+    align-items: flex-start; /* Align items to the top of the container */
+    height: auto; /* Ensure the container fits the content */
+    max-height: 100%; /* Prevent overflow beyond desired height */
+    overflow: hidden; /* Hide any overflowed content */
 }
+
 
 .work__link{
   display: block;
@@ -405,6 +413,30 @@ img {
   transform: translate(.5rem);
 } 
 
+.work__img {
+    display: flex;               /* Flexbox layout for alignment */
+    justify-content: center;     /* Center horizontally */
+    align-items: center;         /* Center vertically */
+    overflow: hidden;            /* Hide overflow to maintain clean edges */
+    padding: 10px;               /* Add padding inside the container */
+    margin: 10px;                /* Add margin outside the container */
+    max-width: 100%;             /* Ensure maximum width is not exceeded */
+    height: auto;                /* Adjust height automatically */
+}
+
+.work__img img {
+  margin: 0;
+  padding: 0;
+  width: 100%;                 /* Responsive width */
+  height: auto;                /* Maintain aspect ratio */
+  display: block;              /* Remove default inline display gaps */
+  object-fit: contain;         /* Prevent stretching and make sure image fits within the container */
+  vertical-align: bottom;
+  line-height: 0;
+  max-height: 100%;
+}
+
+
 
 
 
@@ -436,6 +468,7 @@ img {
 /* ABOUT */
 .about{
   row-gap: 3rem;
+  column-gap: 6rem;
 }
 
 .about__description{
@@ -469,7 +502,7 @@ img {
   row-gap: 2rem;
 }
 
-.experiebce__data{
+.experience__data{
   row-gap: 1rem;
 }
 
@@ -884,9 +917,6 @@ font-weight: var(--font-semi-bold);
     gap: 8rem;
   }
 
-  .work__link{
-    padding: 3rem 2rem 2rem;
-  }
 
   .work__title{
     font-size: var(--h2-font-size);
@@ -920,7 +950,7 @@ font-weight: var(--font-semi-bold);
   }
  
   .about__button{
-   width: initial;
+   width: 99%;
   }
 
   .experience__content{
