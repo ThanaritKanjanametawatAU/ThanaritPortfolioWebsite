@@ -383,6 +383,7 @@ img {
 
 .work__description{
   margin-bottom: 1.5rem;
+  line-height: 2;
 }
 
 .work__link i{
@@ -437,10 +438,12 @@ img {
 
 .about__description{
   margin-bottom: 2rem;
+  line-height: 2;
 }
 
 .about__description b{
   color: var(--first-color-light);
+  line-height: 2;
 }
 
 .about__img{
@@ -476,6 +479,7 @@ img {
 .experience__description{
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  line-height: 2;
 }
 
 .experience__profession{
@@ -541,6 +545,7 @@ img {
 .services__description{
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  line-height: 2;
 }
 
 
@@ -632,6 +637,7 @@ font-weight: var(--font-semi-bold);
 .footer__container{
   padding-block: 3rem 2rem;
   row-gap: 3rem;
+  column-gap: 20rem;
 }
 
 .footer__links{
@@ -653,6 +659,7 @@ font-weight: var(--font-semi-bold);
 .footer__copy{
   color: var(--title-color);
   font-size: var(--small-font-size);
+
   text-align: center;
 }
 /*=============== SCROLL BAR ===============*/
@@ -771,6 +778,15 @@ font-weight: var(--font-semi-bold);
 
   .services__container{
     grid-template-columns: repeat(2, 320px);
+  }
+
+    .footer__container{
+    padding-block: 3rem;
+    columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 15rem;
+    order: 1;
   }
 }
 
@@ -932,11 +948,6 @@ font-weight: var(--font-semi-bold);
     column-gap: 5rem;
   }
 
-  .footer__container{
-    padding-block: 3rem;
-    grid-template-columns: repeat(2, max-content);
-    justify-content: center;
-  }
 
   .footer__links{
     column-gap: 4rem;
