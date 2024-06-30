@@ -779,6 +779,26 @@ font-weight: var(--font-semi-bold);
   }
 }
 
+@media screen and (max-width: 540px){
+  .home__container,
+  .work__container,
+  .info__container,
+  .testimonial__container{
+    justify-content: center;
+    width: 90%;
+    scale: .8;
+  }
+
+
+
+  .contact__social{
+    grid-template-columns: repeat(1, max-content);
+  }
+
+
+
+}
+
 /* For medium devices */
 @media screen and (min-width: 540px){
   .home__container,
