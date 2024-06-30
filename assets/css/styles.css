@@ -365,14 +365,14 @@ img {
 }
 
 .work__card {
-    padding: 0;
-    width: 110%;
-    border: none;
-    display: flex; /* Flex layout to manage child alignment */
-    align-items: flex-start; /* Align items to the top of the container */
-    height: auto; /* Ensure the container fits the content */
-    max-height: 100%; /* Prevent overflow beyond desired height */
-    overflow: hidden; /* Hide any overflowed content */
+  padding: 0;
+  width: 110%;
+  border: none;
+  display: flex; /* Flex layout to manage child alignment */
+  align-items: flex-start; /* Align items to the top of the container */
+  height: auto; /* Ensure the container fits the content */
+  max-height: 100%; /* Prevent overflow beyond desired height */
+  overflow: hidden; /* Hide any overflowed content */
 }
 
 
