@@ -264,10 +264,11 @@ img {
 .home__container {
   row-gap: 5rem;
   padding-top: 1rem;
+  justify-content: center;
 }
 
 .home__img {
-  width: 300px;
+  width: 400px;
   justify-self: center;
   mask-image: linear-gradient(to bottom, 
               hsla(var(--hue), 30%, 15%) 60%, 
@@ -374,6 +375,7 @@ img {
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   color: var(--text-color);
   transition: transform .4s;
+  width: 110%;
 }
 
 .work__title{
@@ -522,31 +524,58 @@ img {
 }
 
 
-/*=============== SERVICES ===============*/
-.services{
+/*=============== TESTIMONIAL ===============*/
+.testimonial{
   background-color: var(--container-color);
 }
 
-.services__container{
+.testimonial__container{
   row-gap: 2rem;
 }
 
-.services__icon{
+
+.testimonial__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items vertically in the card */
+  outline: auto 1px var(--first-color);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  color: var(--text-color);
+  transition: transform .4s;
+  text-align: left; /* Default text alignment */
+}
+
+.testimonial__picture {
   display: block;
-  color: var(--first-color-light);
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  margin: 0 auto; /* Center the picture horizontally */
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
 }
 
-.services__title{
-  font-size: var(--h3-font-size);
+.testimonial__title {
+  font-size: var(--h2-font-size);
   margin-bottom: .75rem;
+  width: 100%; /* Ensures the title takes full width */
+  padding-top: 3rem;
 }
 
-.services__description{
+.testimonial__description {
+  font-size: var(--h3-font-size);
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   line-height: 2;
+  width: 100%; /* Ensures the description takes full width */
+}
+
+.testimonial__name {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  line-height: 1.5rem;
+  text-align: right; /* Right align the name */
+  width: 100%; /* Ensures the name takes full width */
 }
 
 
@@ -722,11 +751,16 @@ font-weight: var(--font-semi-bold);
   .home__container,
   .work__container,
   .info__container,
-  .services__container,
+  .testimonial__container,
   .contact__container{
     grid-template-columns: 350px;
     justify-content: center;
   }
+
+  .work__link{
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
 
   
 }
@@ -752,6 +786,8 @@ font-weight: var(--font-semi-bold);
 
   .work__container{
     grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+    gap: 6rem;
   }
 
   .info__container{
@@ -777,8 +813,9 @@ font-weight: var(--font-semi-bold);
     column-gap: 4rem;
   }
 
-  .services__container{
+  .testimonial__container{
     grid-template-columns: repeat(2, 320px);
+    gap: 8rem;
   }
 
     .footer__container{
@@ -843,7 +880,8 @@ font-weight: var(--font-semi-bold);
 
   .work__container{
     grid-template-columns: repeat(2, 540px);
-    gap: 2.5rem;
+    justify-content: center;
+    gap: 8rem;
   }
 
   .work__link{
@@ -911,12 +949,12 @@ font-weight: var(--font-semi-bold);
     grid-template-columns: repeat(6, max-content);
   }
 
-  .services__container{
-    grid-template-columns: repeat(2, 350px);
+  .testimonial__container{
+    grid-template-columns: repeat(2, 450px);
     gap: 6rem 13rem;
   }
 
-  .services__icon{
+  .testimonial__picture{
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
