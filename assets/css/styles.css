@@ -496,7 +496,7 @@ img {
 
 /* SKILLS */
 .skills__img{
-  width: 35px;
+  width: 65px;
   margin-bottom: .5rem;
 }
 
@@ -514,10 +514,11 @@ img {
   display: grid;
   place-items: center;
   transition: transform .4s;
+  padding: 1.5rem 1rem 1rem 1rem;
 }
 
 .skills__box:hover{
-  transform: translateY(-.25rem);
+  transform: translateY(-.5rem);
 }
 
 
@@ -944,8 +945,8 @@ font-weight: var(--font-semi-bold);
   }
 
   .contact__social{
-    grid-template-columns: repeat(4, max-content);
-    column-gap: 5rem;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 9rem;
   }
 
 
