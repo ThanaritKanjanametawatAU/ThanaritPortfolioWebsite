@@ -1,5 +1,7 @@
-# Responsive Portfolio Website Tailor
-## [Watch it on youtube](https://youtu.be/sF0vW0GgL3U)
+# Thanarit Kanjanametawat's Portfolio
+
+
+## [Fork Reference](https://youtu.be/sF0vW0GgL3U)
 ### Responsive Portfolio Website Tailor
 
 - Responsive Portfolio Website Using HTML CSS And JavaScript

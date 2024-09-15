@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Create Filter Effect in ComfyUI - Stable Diffusion Catalog</title>
+   <link rel="stylesheet" href="../assets/css/styles.css">
+   <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+<body>
+   <header class="header" id="header">
+      <!-- Include your header content here -->
+   </header>
+
+   <main class="main">
+      <article class="blog-post">
+         <h1 class="blog-post__title">Create Filter Effect in ComfyUI</h1>
+         <p class="blog-post__date">Posted on September 10, 2024</p>
+         <img src="assets/img/a1/thumbnail.png" alt="ComfyUI Filter Effect Thumbnail" class="blog-post__img">
+         <div class="blog-post__content">
+            <p>
+               ComfyUI has revolutionized the way we interact with Stable Diffusion models, offering a powerful and flexible node-based interface for creating custom image generation workflows. In this tutorial, we'll explore how to create a unique filter effect using ComfyUI, inspired by the innovative techniques shared by <a href="https://www.youtube.com/@mickmumpitz/videos" target="_blank">Mick Mumpitz on YouTube</a>.
+            </p>
+
+            <br><br>
+            
+
+            <h2>Understanding the Workflow</h2>
+            <img src="assets/img/a1/workflow-overview.png" alt="ComfyUI Workflow" class="blog-post__img">
+            <p>
+               The workflow we'll be using combines several powerful nodes to create a stunning filter effect. Here's a breakdown of the key components:
+            </p>
+            <ul>
+               <li><strong>Source Video:</strong> The initial input for the workflow.</li>
+               <li><strong>Create Mask for Each Frame:</strong> Generates masks for specific elements in each video frame.</li>
+               <li><strong>Fade Effect (Optional):</strong> Applies a fade effect to the video frames if desired.</li>
+               <li><strong>SD Checkpoints:</strong> A checkpoint in the process, likely related to Stable Diffusion models.</li>
+               <li><strong>Prompting:</strong> Adds instructions or prompts to guide the subsequent processes.</li>
+               <li><strong>AnimateDiff:</strong> Handles animations or differences between frames.</li>
+               <li><strong>ControlNet:</strong> A neural network component for controlling the generation or modification process.</li>
+               <li><strong>Diffusion Step:</strong> Applies a diffusion model, possibly for image generation or modification.</li>
+               <li><strong>Frame Interpolation and Combining:</strong> Creates intermediate frames and combines all frames into the final output.</li>
+            </ul>
+            <br><br>
+
+            <h2>Filter Effects</h2>
+            <div class="video-container">
+               <div class="video-wrapper">
+                  <video controls>
+                     <source src="assets/img/a1/Original.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                  </video>
+               </div>
+               <p class="video-caption">Original Video</p>
+            </div>
+            <div class="video-container">
+
+               <div class="video-wrapper">
+                  <video controls>
+                     <source src="assets/img/a1/Raccoon.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                  </video>
+               </div>
+               <p class="video-caption">Raccoon Filter Effect</p>
+            </div>
+            <div class="video-container">
+
+               <div class="video-wrapper">
+                  <video controls>
+                     <source src="assets/img/a1/Zombie.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                  </video>
+               </div>
+               <p class="video-caption">Zombie Filter Effect</p>
+            </div>
+
+            <p>
+               As you can see from the original video and the two filtered versions, this ComfyUI workflow allows for dramatic transformations. The Raccoon filter adds a playful, furry texture to the image, while the Zombie filter creates a more eerie, undead appearance. These examples demonstrate the versatility of the filter effects you can achieve using ComfyUI.
+            </p>
+            <br><br>
+
+            <h2>Implementing the Workflow</h2>
+            <p>
+               To implement this filter effect in your own projects, follow these steps:
+            </p>
+            <ol>
+               <li>Download the <a href="assets/img/a1/workflow.json" download>workflow JSON file</a>.</li>
+               <li>Import the JSON file into ComfyUI.</li>
+               <li>Adjust the parameters of each node to fine-tune the effect for your specific needs.</li>
+               <li>Experiment with different input images to see how the filter affects various subjects and styles.</li>
+            </ol>
+
+            <p>
+               Remember, this workflow is just a starting point. Feel free to modify and expand upon it to create your own unique filter effects. The power of ComfyUI lies in its flexibility and the ability to combine nodes in creative ways.
+            </p>
+            <br><br>
+
+            <h2>Conclusion</h2>
+            <p>
+               By leveraging the advanced capabilities of ComfyUI, we've created a powerful and versatile filter effect that can dramatically enhance your Stable Diffusion outputs. This technique opens up new possibilities for artistic expression and image manipulation within the AI art generation ecosystem.
+            </p>
+            <p>
+               For more inspiring ComfyUI tutorials and techniques, be sure to check out <a href="https://www.youtube.com/@mickmumpitz/videos" target="_blank">Mick Mumpitz's YouTube channel</a>. Happy creating!
+            </p>
+            <br><br>
+         </div>
+      </article>
+   </main>
+
+   <footer class="footer">
+      <!-- Include your footer content here -->
+   </footer>
+
+   <script src="assets/js/main.js"></script>
+   <script>
+      document.addEventListener('DOMContentLoaded', function() {
+         const videos = document.querySelectorAll('.video-wrapper video');
+         videos.forEach(video => {
+            video.addEventListener('loadedmetadata', function() {
+               const wrapper = this.closest('.video-wrapper');
+               if (this.videoHeight > this.videoWidth) {
+                  wrapper.classList.add('vertical');
+               }
+            });
+         });
+      });
+   </script>
+</body>
+</html>
