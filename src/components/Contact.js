@@ -78,26 +78,46 @@ const Contact = () => {
               </p>
               
               <div className="contact-grid">
-                {contactInfo.map((info, index) => (
-                  <motion.div
-                    key={index}
-                    className="contact-card"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                    whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                  >
-                    <div className="contact-icon">{info.icon}</div>
-                    <h4>{info.title}</h4>
-                    {info.link ? (
-                      <a href={info.link} target="_blank" rel="noopener noreferrer">
-                        {info.value}
-                      </a>
-                    ) : (
+                {contactInfo.map((info, index) => {
+                  const cardContent = (
+                    <>
+                      <div className="contact-icon">{info.icon}</div>
+                      <h4>{info.title}</h4>
                       <p>{info.value}</p>
-                    )}
-                  </motion.div>
-                ))}
+                    </>
+                  );
+
+                  if (info.link) {
+                    return (
+                      <motion.a
+                        key={index}
+                        href={info.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="contact-card"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={inView ? { opacity: 1, scale: 1 } : {}}
+                        transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                        whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                      >
+                        {cardContent}
+                      </motion.a>
+                    );
+                  } else {
+                    return (
+                      <motion.div
+                        key={index}
+                        className="contact-card"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={inView ? { opacity: 1, scale: 1 } : {}}
+                        transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                        whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                      >
+                        {cardContent}
+                      </motion.div>
+                    );
+                  }
+                })}
               </div>
             </motion.div>
           </div>

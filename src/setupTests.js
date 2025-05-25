@@ -54,18 +54,27 @@ jest.mock('lenis', () => {
 });
 
 // Mock framer-motion
-jest.mock('framer-motion', () => ({
-  motion: {
-    div: ({ children, whileHover, whileTap, variants, initial, animate, transition, custom, ...props }) => <div {...props}>{children}</div>,
-    a: ({ children, whileHover, whileTap, variants, initial, animate, transition, custom, ...props }) => <a {...props}>{children}</a>,
-    section: ({ children, whileHover, whileTap, variants, initial, animate, transition, custom, ...props }) => <section {...props}>{children}</section>,
-  },
-  useAnimation: () => ({
-    start: jest.fn(),
-    set: jest.fn()
-  }),
-  useInView: () => [null, true]
-}));
+jest.mock('framer-motion', () => {
+  const React = require('react');
+  return {
+    motion: {
+      div: React.forwardRef(({ children, whileHover, whileTap, variants, initial, animate, transition, custom, ...props }, ref) => 
+        React.createElement('div', { ...props, ref }, children)
+      ),
+      a: React.forwardRef(({ children, whileHover, whileTap, variants, initial, animate, transition, custom, ...props }, ref) => 
+        React.createElement('a', { ...props, ref }, children)
+      ),
+      section: React.forwardRef(({ children, whileHover, whileTap, variants, initial, animate, transition, custom, ...props }, ref) => 
+        React.createElement('section', { ...props, ref }, children)
+      ),
+    },
+    useAnimation: () => ({
+      start: jest.fn(),
+      set: jest.fn()
+    }),
+    useInView: () => [null, true]
+  };
+});
 
 // Mock react-intersection-observer
 jest.mock('react-intersection-observer', () => ({

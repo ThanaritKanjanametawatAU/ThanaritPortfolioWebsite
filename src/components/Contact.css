@@ -43,6 +43,9 @@
   border: 1px solid var(--bg-tertiary);
   overflow: hidden;
   min-width: 0;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .contact-card:hover {
@@ -69,27 +72,17 @@
   color: var(--text-primary);
 }
 
-.contact-card a {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
-  word-break: break-all;
-  overflow-wrap: break-word;
-  display: block;
-  width: 100%;
-  text-decoration: none;
-}
-
-.contact-card a:hover {
-  color: var(--accent-primary);
-}
-
 .contact-card p {
   color: var(--text-secondary);
   font-size: 0.95rem;
   word-break: break-all;
   overflow-wrap: break-word;
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+.contact-card:hover p {
+  color: var(--accent-primary);
 }
 
 @media (max-width: 768px) {
