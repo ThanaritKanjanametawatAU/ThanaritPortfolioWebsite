@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing AI research, projects, and technical expertise. Built with React and featuring smooth animations, dark mode design, and a dedicated Stable Diffusion blog section.
 
-![preview img](/preview.png)
+![preview img](/preview-new.png)
 
 ## 🚀 Features
 
