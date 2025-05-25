@@ -104,14 +104,14 @@ const Projects = () => {
     {
       title: 'Car Analytics Platform',
       description: 'Vehicle data analysis with interactive dashboards.',
-      image: '/assets/img/work-mgtd.png',
+      image: '/assets/img/work-car-analytics.png',
       tags: ['Web', 'Full-Stack'],
       technologies: [
         { icon: <SiNextdotjs />, name: 'Next.js' },
         { icon: <SiMongodb />, name: 'MongoDB' },
         { icon: <FaReact />, name: 'React' }
       ],
-      github: 'https://github.com/ThanaritKanjanametawatAU/car-analytics',
+      github: 'https://github.com/ThanaritKanjanametawatAU/CarAnalytics',
       color: '#3730a3'
     },
     {
