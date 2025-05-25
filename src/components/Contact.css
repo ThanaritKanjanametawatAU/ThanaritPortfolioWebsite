@@ -41,6 +41,8 @@
   text-align: center;
   transition: all 0.3s ease;
   border: 1px solid var(--bg-tertiary);
+  overflow: hidden;
+  min-width: 0;
 }
 
 .contact-card:hover {
@@ -71,6 +73,11 @@
   color: var(--text-secondary);
   font-size: 0.95rem;
   transition: color 0.3s ease;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  display: block;
+  width: 100%;
+  text-decoration: none;
 }
 
 .contact-card a:hover {
@@ -80,6 +87,9 @@
 .contact-card p {
   color: var(--text-secondary);
   font-size: 0.95rem;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  margin: 0;
 }
 
 @media (max-width: 768px) {

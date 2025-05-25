@@ -3,15 +3,29 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 1.5rem 0;
 }
 
 .navbar.scrolled {
-  background: rgba(10, 10, 10, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
+}
+
+.navbar.scrolled .navbar-menu li a {
+  color: var(--text-secondary);
+}
+
+.navbar.scrolled .navbar-menu li a:hover,
+.navbar.scrolled .navbar-menu li a.active {
+  color: var(--text-primary);
+}
+
+.navbar.scrolled .navbar-brand {
+  color: var(--text-primary);
 }
 
 .navbar-content {
@@ -21,25 +35,38 @@
 }
 
 .navbar-brand {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 900;
+  letter-spacing: -0.05em;
   cursor: pointer;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
 }
 
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 2.5rem;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .navbar-menu li a {
   color: var(--text-secondary);
   font-weight: 500;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.2s ease;
   position: relative;
+  letter-spacing: 0.01em;
 }
 
 .navbar-menu li a:hover {
@@ -53,17 +80,19 @@
 .navbar-menu li a::after {
   content: '';
   position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 100%;
   height: 2px;
-  background: var(--accent-gradient);
-  transition: width 0.3s ease;
+  background: var(--accent-primary);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
 }
 
 .navbar-menu li a:hover::after,
 .navbar-menu li a.active::after {
-  width: 100%;
+  transform: translateX(-50%) scaleX(0.8);
 }
 
 .mobile-menu-toggle {
@@ -73,48 +102,98 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  padding: 8px;
+  position: relative;
+  z-index: 1002;
 }
 
 .mobile-menu-toggle span {
-  width: 25px;
+  width: 24px;
   height: 2px;
   background: var(--text-primary);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+.navbar.scrolled .mobile-menu-toggle span {
+  background: var(--text-primary);
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 0;
+  }
+  
+  .navbar.scrolled {
+    padding: 1rem 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
   .navbar-menu {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 70%;
+    right: 0;
+    width: 100%;
     height: 100vh;
-    background: var(--bg-secondary);
+    background: white;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: right 0.3s ease;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
   }
 
   .navbar-menu.active {
-    right: 0;
+    transform: translateX(0);
+  }
+
+  .navbar-menu li a {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .navbar-menu li a::after {
+    bottom: -4px;
   }
 
   .mobile-menu-toggle {
     display: flex;
-    z-index: 1001;
   }
 
+  .navbar-menu.active ~ .mobile-menu-toggle span,
+  .mobile-menu-toggle.active span {
+    background: var(--text-primary);
+  }
+
+  .mobile-menu-toggle.active span:nth-child(1),
   .navbar-menu.active ~ .mobile-menu-toggle span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
 
+  .mobile-menu-toggle.active span:nth-child(2),
   .navbar-menu.active ~ .mobile-menu-toggle span:nth-child(2) {
     opacity: 0;
+    transform: scaleX(0);
   }
 
+  .mobile-menu-toggle.active span:nth-child(3),
   .navbar-menu.active ~ .mobile-menu-toggle span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-menu {
+    gap: 1.5rem;
+  }
+  
+  .navbar-menu li a {
+    font-size: 1.125rem;
   }
 }

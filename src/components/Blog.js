@@ -84,7 +84,7 @@ const Blog = () => {
                   <h3 className="blog-title">{post.title}</h3>
                   <p className="blog-excerpt">{post.excerpt}</p>
                   
-                  <a href={post.link} className="blog-link">
+                  <a href={post.link} className="blog-link" target="_blank" rel="noopener noreferrer">
                     Read More <FaArrowRight />
                   </a>
                 </div>
@@ -93,7 +93,7 @@ const Blog = () => {
           </div>
 
           <div className="blog-cta">
-            <a href="/stable-diffusion-catalog.html" className="btn btn-primary">
+            <a href="/stable-diffusion-catalog.html" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
               View All Posts
             </a>
           </div>

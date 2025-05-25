@@ -31,29 +31,17 @@ const About = () => {
             <div className="about-text">
               <p className="about-intro">
                 I'm <span className="gradient-text">Thanarit Kanjanametawat</span> (Bonus), 
-                an AI Researcher passionate about creating intelligent systems that make a difference.
+                an AI Researcher specializing in voice synthesis and generative models.
               </p>
               
               <p>
-                With a strong foundation in Computer Science from Assumption University of Thailand, 
-                I specialize in developing cutting-edge AI solutions, particularly in computer vision 
-                and deep learning. My journey in AI began with a fascination for how machines can 
-                learn to see and understand the world around us.
+                Currently at Baksters, I lead SparkVoice development - advanced voice cloning for Thai/English.
+                My expertise spans diffusion models, computer vision, and production AI systems.
               </p>
               
               <p>
-                Currently, I'm working at Baksters as a full-time AI Researcher (since April 2025), 
-                where I lead the development of SparkVoice - an advanced voice cloning system supporting 
-                Thai and English languages. My work spans from implementing state-of-the-art diffusion 
-                models to creating production-ready AI applications that solve real-world problems.
-              </p>
-              
-              <p>
-                When I'm not training models or writing code, you'll find me exploring the latest 
-                AI research papers, contributing to open-source projects on HuggingFace, or sharing 
-                my knowledge through blog posts about Stable Diffusion and other AI technologies. 
-                I'm particularly interested in pushing the boundaries of generative AI and making 
-                these technologies accessible to everyone.
+                Active in open-source AI, HuggingFace contributor, and Stable Diffusion enthusiast.
+                Focused on making cutting-edge AI accessible and practical.
               </p>
             </div>
 
