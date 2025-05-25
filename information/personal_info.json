@@ -1,0 +1,43 @@
+{
+  "personal": {
+    "name": "Thanarit Kanjanametawat",
+    "nickname": "Bonus",
+    "title": "AI Researcher & Software Engineer",
+    "location": "Bangkok, Thailand",
+    "email": "your.email@example.com",
+    "linkedin": "https://www.linkedin.com/in/thanarit-kanjanametawat-1354b7211/",
+    "github": "https://github.com/ThanaritKanjanametawatAU",
+    "summary": "AI Researcher at Baksters with expertise in computer vision, deep learning, and diffusion models. Passionate about building innovative AI solutions and pushing the boundaries of machine learning technology."
+  },
+  "education": {
+    "degree": "Bachelor's Degree in Computer Science",
+    "institution": "Assumption University of Thailand",
+    "period": "2021 - 2025",
+    "highlights": ["AI/ML specialization", "Senior project on PCB Defect Generation using Diffusion Models"]
+  },
+  "experience": [
+    {
+      "position": "AI Researcher",
+      "company": "Baksters",
+      "period": "April 2025 - Present (Full-time)",
+      "previousPeriod": "November 2023 - April 2025 (Part-time)",
+      "description": "Working on cutting-edge AI solutions including computer vision, face recognition, and deep learning applications",
+      "highlights": [
+        "Developed LLM Detection System",
+        "Implemented PCB Defect Generation using Diffusion Models",
+        "Contributed to computer vision platforms for indoor facilities"
+      ]
+    }
+  ],
+  "skills": {
+    "programming": ["Python", "JavaScript", "TypeScript", "Dart"],
+    "ai_ml": ["PyTorch", "TensorFlow", "Diffusion Models", "Computer Vision", "NLP", "Deep Learning"],
+    "web": ["React", "Next.js", "FastHTML", "Node.js", "MongoDB"],
+    "tools": ["Git", "Docker", "RunPod", "ComfyUI", "Stable Diffusion"],
+    "cloud": ["Google Cloud", "AWS", "Serverless Architecture"]
+  },
+  "languages": [
+    {"language": "Thai", "level": "Native"},
+    {"language": "English", "level": "Fluent"}
+  ]
+}

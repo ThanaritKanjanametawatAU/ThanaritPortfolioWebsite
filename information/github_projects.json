@@ -1,0 +1,46 @@
+{
+  "key_projects": [
+    {
+      "name": "ASL Detection Application",
+      "description": "Flutter application for detecting American Sign Language",
+      "technologies": ["Flutter", "Dart", "Computer Vision"],
+      "github": "https://github.com/ThanaritKanjanametawatAU/asl_detection_application",
+      "highlights": ["Real-time hand gesture recognition", "Mobile application development"]
+    },
+    {
+      "name": "SDXL Web Demo",
+      "description": "SDXL Inference with FastHTML Framework",
+      "technologies": ["Python", "FastHTML", "Stable Diffusion", "AI/ML"],
+      "github": "https://github.com/ThanaritKanjanametawatAU/SDXL-Web-Demo",
+      "highlights": ["Web-based AI image generation", "Modern web framework implementation"]
+    },
+    {
+      "name": "Stable Diffusion from Scratch",
+      "description": "Implementation of latent diffusion models from scratch using PyTorch",
+      "technologies": ["Python", "PyTorch", "Deep Learning", "Diffusion Models"],
+      "github": "https://github.com/ThanaritKanjanametawatAU/stable-diffusion-from-scratch",
+      "highlights": ["Deep understanding of diffusion models", "Research implementation"]
+    },
+    {
+      "name": "RunPod Model Container",
+      "description": "Model Holder for Runpod Container and Serverless deployment",
+      "technologies": ["Python", "Docker", "Cloud Computing", "RunPod"],
+      "github": "https://github.com/ThanaritKanjanametawatAU/runpod-model-container",
+      "highlights": ["Cloud deployment", "Serverless architecture", "Container orchestration"]
+    },
+    {
+      "name": "Car Analytics",
+      "description": "Car Analysis Website",
+      "technologies": ["Web Development", "Data Analytics"],
+      "github": "https://github.com/ThanaritKanjanametawatAU/CarAnalytics",
+      "highlights": ["Data visualization", "Analytics platform"]
+    },
+    {
+      "name": "E-Learning Portal",
+      "description": "E-Learning Platform using NextJS and MongoDB",
+      "technologies": ["Next.js", "MongoDB", "React", "Node.js"],
+      "github": "https://github.com/ThanaritKanjanametawatAU/e-learning-portal",
+      "highlights": ["Full-stack development", "Modern web technologies"]
+    }
+  ]
+}
