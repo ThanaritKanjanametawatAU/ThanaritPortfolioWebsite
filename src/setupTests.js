@@ -67,6 +67,9 @@ jest.mock('framer-motion', () => {
       section: React.forwardRef(({ children, whileHover, whileTap, variants, initial, animate, transition, custom, ...props }, ref) => 
         React.createElement('section', { ...props, ref }, children)
       ),
+      article: React.forwardRef(({ children, whileHover, whileTap, variants, initial, animate, transition, custom, ...props }, ref) => 
+        React.createElement('article', { ...props, ref }, children)
+      ),
     },
     useAnimation: () => ({
       start: jest.fn(),
