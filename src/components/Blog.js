@@ -40,6 +40,16 @@ const Blog = () => {
       date: 'September 20, 2024',
       readTime: '12 min read',
       link: '/sd-pages/a3-build-sd-website-fasthtml.html'
+    },
+    {
+      id: 4,
+      title: 'Fish Speech Voice Cloning',
+      excerpt: 'Comprehensive guide to understanding Fish Speech\'s mathematical foundations, from vector quantization to dual autoregressive architectures.',
+      image: '/sd-pages/assets/img/a4/thumbnail.png',
+      category: 'AI Research',
+      date: 'May 26, 2025',
+      readTime: '20 min read',
+      link: '/sd-pages/a4-fish-speech-voice-cloning.html'
     }
   ];
 
