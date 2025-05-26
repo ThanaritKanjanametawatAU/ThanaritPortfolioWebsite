@@ -11,7 +11,7 @@ A modern, responsive portfolio website showcasing AI research, projects, and tec
 - **Responsive Design**: Mobile-first approach with CSS Grid/Flexbox
 - **Dark Theme**: Professional dark mode design with purple accents
 - **Interactive Components**: Filterable project gallery, animated skills display
-- **Blog Section**: Dedicated Stable Diffusion tutorials and articles
+- **Blog Section**: Dedicated AI/ML tutorials including Stable Diffusion and Fish Speech articles
 - **Contact Form**: Integrated contact functionality with social links
 
 ## 🛠️ Tech Stack
@@ -60,7 +60,8 @@ npm run build
 │       ├── Contact.js  # Contact form
 │       └── Footer.js   # Site footer
 ├── information/        # Portfolio data (JSON)
-└── sd-pages/          # Stable Diffusion blog content
+├── sd-pages/          # AI/ML blog content (SD, Fish Speech, etc.)
+└── src/components/__tests__/  # Component test files
 ```
 
 ## 🎨 Customization

@@ -29,7 +29,7 @@ This is Thanarit Kanjanametawat's portfolio website - a modern, responsive React
 4. **Experience**: Timeline-based career/education display
 5. **Projects**: Filterable project gallery with hover effects
 6. **Skills**: Categorized skill display with progress bars
-7. **Blog**: SD-related blog posts showcase
+7. **Blog**: AI/ML-related blog posts showcase (Stable Diffusion, Fish Speech)
 8. **Contact**: Contact form with social links
 9. **Footer**: Site links and credits
 
@@ -53,10 +53,16 @@ This is Thanarit Kanjanametawat's portfolio website - a modern, responsive React
 │       ├── Blog.js/css
 │       ├── Contact.js/css
 │       └── Footer.js/css
+│       └── __tests__/           # Component test files
+│           ├── ContactCardClickable.test.js
+│           ├── ContactLinks.test.js
+│           ├── PortfolioIssues.test.js
+│           ├── FishSpeechBlog.test.js
+│           └── FishSpeechBlogContent.test.js
 ├── information/                 # Gathered portfolio data
 │   ├── github_projects.json
 │   └── personal_info.json
-└── sd-pages/                    # Legacy SD blog posts (kept for reference)
+└── sd-pages/                    # AI/ML blog posts (SD, Fish Speech, etc.)
 ```
 
 ## Development Workflow
@@ -87,6 +93,7 @@ npm run build
 1. Add to `blogPosts` array in `src/components/Blog.js`
 2. Include thumbnail, title, excerpt, date
 3. Link to existing SD pages or create new React components
+4. Add corresponding test files in `src/components/__tests__/` if needed
 
 #### Skill Updates
 1. Edit `src/components/Skills.js`
@@ -139,6 +146,12 @@ npm test -- --watch
 # Generate coverage report
 npm test -- --coverage
 ```
+
+### Test Structure
+- Component tests in `src/components/__tests__/`
+- Tests use React Testing Library and Jest
+- Mock configurations in `src/setupTests.js`
+- Focus on user interactions and integration
 
 ### Code Quality
 - **Linting**: ESLint configuration included with Create React App
