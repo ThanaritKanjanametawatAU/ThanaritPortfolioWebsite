@@ -1,0 +1,201 @@
+---
+title: "Build a Stable Diffusion Website with FastHTML"
+date: "2024-09-20"
+excerpt: "Step-by-step guide on creating a responsive website for Stable Diffusion projects using the modern FastHTML framework."
+category: "Web Development"
+image: "/sd-pages/assets/img/a3/thumbnail.png"
+readTime: "12 min read"
+---
+
+# Build a Stable Diffusion Website with FastHTML
+
+Learn how to create a modern, responsive website for showcasing your Stable Diffusion projects using FastHTML - a Python-based web framework that makes web development intuitive and fast.
+
+## Why FastHTML?
+
+FastHTML is perfect for AI developers because:
+- **Python-native**: No need to learn JavaScript
+- **Reactive**: Built-in reactivity without complex state management
+- **Fast**: Optimized for performance
+- **AI-friendly**: Easy integration with ML models
+
+## Project Setup
+
+### Prerequisites
+```bash
+pip install python-fasthtml
+pip install pillow numpy
+pip install diffusers torch  # For SD integration
+```
+
+### Project Structure
+```
+stable-diffusion-web/
+├── app.py
+├── static/
+│   ├── css/
+│   └── images/
+├── templates/
+└── models/
+```
+
+## Building the Application
+
+### Basic FastHTML App
+```python
+from fasthtml import FastHTML, Component
+from fasthtml.common import *
+
+app = FastHTML()
+
+@app.route("/")
+def home():
+    return Html(
+        Head(
+            Title("Stable Diffusion Gallery"),
+            Link(rel="stylesheet", href="/static/css/style.css")
+        ),
+        Body(
+            H1("My AI Art Gallery"),
+            Gallery()
+        )
+    )
+```
+
+### Image Gallery Component
+```python
+@component
+def Gallery():
+    images = load_generated_images()
+    return Div(
+        *[ImageCard(img) for img in images],
+        class_="gallery-grid"
+    )
+
+@component
+def ImageCard(image_data):
+    return Div(
+        Img(src=image_data['url'], alt=image_data['prompt']),
+        P(image_data['prompt'], class_="prompt"),
+        class_="image-card"
+    )
+```
+
+### Real-time Generation Interface
+```python
+@app.route("/generate")
+async def generate_image(prompt: str):
+    # Integration with Stable Diffusion
+    image = await generate_with_sd(prompt)
+    return ImageCard({
+        'url': save_image(image),
+        'prompt': prompt
+    })
+```
+
+## Styling with Tailwind CSS
+
+FastHTML works great with Tailwind CSS:
+```python
+Head(
+    Script(src="https://cdn.tailwindcss.com"),
+    Style("""
+        .gallery-grid {
+            @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+        }
+        .image-card {
+            @apply bg-gray-800 rounded-lg overflow-hidden;
+        }
+    """)
+)
+```
+
+## Adding Interactivity
+
+### Live Image Generation
+```python
+@component
+def GeneratorForm():
+    return Form(
+        Input(
+            type="text",
+            name="prompt",
+            placeholder="Enter your prompt...",
+            class_="w-full p-2 rounded"
+        ),
+        Button(
+            "Generate",
+            hx_post="/generate",
+            hx_target="#gallery",
+            class_="bg-purple-600 text-white px-4 py-2"
+        )
+    )
+```
+
+### Progress Indicators
+```python
+@component
+def ProgressBar():
+    return Div(
+        Div(class_="progress-bar", hx_trigger="load"),
+        hx_get="/progress",
+        hx_swap="innerHTML"
+    )
+```
+
+## Deployment
+
+### Using Vercel
+1. Create `requirements.txt`
+2. Add `vercel.json` configuration
+3. Deploy with `vercel --prod`
+
+### Using Docker
+```dockerfile
+FROM python:3.11
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["python", "app.py"]
+```
+
+## Advanced Features
+
+### Caching Generated Images
+- Implement Redis caching
+- Store prompts and seeds
+- Quick retrieval of previous generations
+
+### User Authentication
+- Add user accounts
+- Personal galleries
+- Sharing capabilities
+
+### API Integration
+- RESTful API endpoints
+- WebSocket for real-time updates
+- Integration with ComfyUI
+
+## Performance Optimization
+
+1. **Image Optimization**: Use WebP format
+2. **Lazy Loading**: Load images as needed
+3. **CDN Integration**: Serve static assets via CDN
+4. **Database Indexing**: Optimize queries
+
+## Example Implementation
+
+Check out the complete example:
+![Prompting Interface](/sd-pages/assets/img/a3/prompting.png)
+
+## Best Practices
+
+1. **Responsive Design**: Mobile-first approach
+2. **Accessibility**: ARIA labels and keyboard navigation
+3. **SEO**: Meta tags and structured data
+4. **Security**: Input validation and rate limiting
+
+## Conclusion
+
+FastHTML makes it incredibly easy to build web interfaces for your Stable Diffusion projects. Its Python-native approach and built-in reactivity features allow you to focus on creativity rather than wrestling with complex frontend frameworks.

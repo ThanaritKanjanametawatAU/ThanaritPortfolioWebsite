@@ -1,115 +1,36 @@
-# Thanarit Kanjanametawat's Portfolio
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A modern, responsive portfolio website showcasing AI research, projects, and technical expertise. Built with React and featuring smooth animations, dark mode design, and a dedicated Stable Diffusion blog section.
+## Getting Started
 
-![preview img](/preview-new.png)
-
-## 🚀 Features
-
-- **Modern React SPA**: Built with React 18 and modern JavaScript
-- **Smooth Animations**: Powered by Framer Motion for engaging user experience
-- **Responsive Design**: Mobile-first approach with CSS Grid/Flexbox
-- **Dark Theme**: Professional dark mode design with purple accents
-- **Interactive Components**: Filterable project gallery, animated skills display
-- **Blog Section**: Dedicated AI/ML tutorials including Stable Diffusion and Fish Speech articles
-- **Contact Form**: Integrated contact functionality with social links
-
-## 🛠️ Tech Stack
-
-- **Frontend**: React 18.2.0
-- **Animation**: Framer Motion 11.0.0
-- **Icons**: React Icons 5.0.1
-- **Scroll**: React Scroll 1.9.0
-- **Intersection Observer**: React Intersection Observer 9.5.3
-- **Build Tool**: Create React App
-
-## 📦 Installation
+First, run the development server:
 
 ```bash
-# Clone the repository
-git clone https://github.com/ThanaritKanjanametawat/ThanaritPortfolioWebsite.git
-
-# Navigate to project directory
-cd ThanaritPortfolioWebsite
-
-# Install dependencies
-npm install
-
-# Start development server
-npm start
-
-# Build for production
-npm run build
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## 📁 Project Structure
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```
-├── public/              # Static assets
-├── src/
-│   ├── App.js          # Main app component
-│   ├── App.css         # Global styles
-│   └── components/     # React components
-│       ├── Navbar.js   # Navigation
-│       ├── Hero.js     # Landing section
-│       ├── About.js    # About section
-│       ├── Experience.js # Timeline display
-│       ├── Projects.js # Project gallery
-│       ├── Skills.js   # Skills showcase
-│       ├── Blog.js     # Blog posts
-│       ├── Contact.js  # Contact form
-│       └── Footer.js   # Site footer
-├── information/        # Portfolio data (JSON)
-├── sd-pages/          # AI/ML blog content (SD, Fish Speech, etc.)
-└── src/components/__tests__/  # Component test files
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 🎨 Customization
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### Adding New Projects
-Edit `src/components/Projects.js` and add your project to the `projects` array:
-```javascript
-{
-  title: "Project Name",
-  description: "Project description",
-  image: "/path/to/image",
-  tags: ["tag1", "tag2"],
-  technologies: [
-    { icon: FaReact, name: "React" }
-  ],
-  github: "https://github.com/...",
-  live: "https://..."
-}
-```
+## Learn More
 
-### Updating Skills
-Edit `src/components/Skills.js` and update the `skillCategories` array.
+To learn more about Next.js, take a look at the following resources:
 
-### Adding Blog Posts
-Edit `src/components/Blog.js` and add to the `blogPosts` array.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 📱 Responsive Design
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-- Mobile-first approach
-- Breakpoints at 768px and 1024px
-- Optimized for all device sizes
+## Deploy on Vercel
 
-## 🚀 Deployment
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-The site builds to a static bundle that can be deployed to any static hosting service:
-
-```bash
-npm run build
-```
-
-Deploy the `/build` directory to your hosting platform of choice.
-
-## 📝 License
-
-This project is open source and available under the MIT License.
-
-## 🙏 Acknowledgments
-
-- Original design inspiration from [Bedimcode](https://www.youtube.com/@Bedimcode)
-- Icons from React Icons
-- Animations powered by Framer Motion
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

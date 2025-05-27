@@ -2,9 +2,14 @@
 /node_modules
 /.pnp
 .pnp.js
+.yarn/install-state.gz
 
 # Testing
 /coverage
+
+# Next.js
+/.next/
+/out/
 
 # Production
 /build
@@ -43,3 +48,10 @@ ENV/
 # Temporary files
 *.tmp
 *.temp
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
